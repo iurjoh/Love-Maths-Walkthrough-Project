@@ -1,3 +1,41 @@
+# Love Maths walkthrough
+
+A browser arithmetic game with addition, subtraction, multiplication and division, answer checking and correct/incorrect counters.
+
+[Português (Brasil)](README.pt-BR.md)
+
+## Idea and process
+
+Source reviewed on 2026-10-01. Educational walkthrough based on Code Institute material. No dated planning notes, wireframes or personal design diary were found in the reviewed files. This records the implemented exercise, not original product history.
+
+## Architecture and design
+
+index.html supplies operation buttons, operands, answer input and scores. assets/js/script.js attaches click/Enter listeners, generates random numbers from 1 to 25 and stores visible state in the DOM. Subtraction orders operands to avoid negatives; division uses a product divided by the smaller operand, producing an integer. There is no backend or persistent score storage. The interface uses operation colors, icons and Google fonts.
+
+## Local preview
+
+```bash
+python3 -m http.server 8000
+```
+
+Open `http://localhost:8000/`. External fonts/icons/images need network access. The preview was not run during this update; no current public deployment was verified.
+
+## Testing and limitations
+
+No automated suite was found in the reviewed root listing. Browser/manual checks were not run. Check all four operations, Enter and button submission, focus, score changes and reload behavior. parseInt truncates decimal input; empty input becomes NaN and is counted wrong. The stylesheet link in index.html is missing its closing >. Icon-only operation buttons and the answer field need accessible-name review. These observations are not test-pass claims.
+
+## Snapshots
+
+No application screenshot was verified or added. Future dated files under `docs/assets/` should show actual desktop/mobile states, without personal form data. Add links only after files exist; never invent a working-state capture.
+
+## Credits and licensing
+
+Code Institute walkthrough/template material, libraries and assets retain their original rights. No new license is applied. The original README remains below as historical source, not current setup advice.
+
+---
+
+## Original README
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Iuri Johansson,
